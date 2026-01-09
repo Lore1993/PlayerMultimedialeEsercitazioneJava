@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        Audio musica = new Audio();
         Scanner sc = new Scanner(System.in);
 
         //Scelta del media
@@ -19,7 +19,10 @@ public class Main {
                 String audioScelto = sc.nextLine();
                 AudOpt riprodurre = AudOpt.valueOf(audioScelto);
                 //Adesso agisci poi cancella commento
-                System.out.println("Hai scelto l'audio: " + riprodurre);
+
+                musica.abbassaVolume(riprodurre);
+                musica.alzaVolume(riprodurre);
+                musica.play(riprodurre);
                 break;
             }
             case Video: {
@@ -41,5 +44,8 @@ public class Main {
                 break;
             }
         }
+    }
+
+    private static void alzaVolume() {
     }
 }

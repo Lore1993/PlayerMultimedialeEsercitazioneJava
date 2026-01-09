@@ -4,10 +4,12 @@ public abstract class Multimedia {
     protected int durata;
 
     //costruttore
-    public Multimedia(int durata) {
+    public Multimedia() {
         this.durata = durata;
     }
 
     //metodo
     public abstract void play();
+
+    public abstract void play(AudOpt audio);
 }
