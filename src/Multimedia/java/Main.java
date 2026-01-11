@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Audio musica = new Audio();
+        Video video = new Video();
+        Img immagine = new Img();
         Scanner sc = new Scanner(System.in);
 
         //Scelta del media
@@ -18,7 +20,7 @@ public class Main {
                 System.out.println("Scegli il tuo audio preferito: Audio+(numero da 1 a 5)");
                 String audioScelto = sc.nextLine();
                 AudOpt riprodurre = AudOpt.valueOf(audioScelto);
-                //Adesso agisci poi cancella commento
+
 
                 musica.abbassaVolume(riprodurre);
                 musica.alzaVolume(riprodurre);
@@ -29,23 +31,28 @@ public class Main {
 
                 System.out.println("Scegli il tuo audio preferito: Video+(numero da 1 a 5)");
                 String videoScelto = sc.nextLine();
-                AudOpt riprodurreVid = AudOpt.valueOf(videoScelto);
-                //Adesso agisci poi cancella commento
-                System.out.println("Hai scelto l'audio: " + riprodurreVid);
+                VidOpt riprodurreVid = VidOpt.valueOf(videoScelto);
+
+                video.abbassailVolume(riprodurreVid);
+                video.alzailVolume(riprodurreVid);
+                video.alzaLuce(riprodurreVid);
+                video.abbassaLuce(riprodurreVid);
+                video.play(riprodurreVid);
                 break;
             }
             case Immagine: {
 
                 System.out.println("Scegli il tuo audio preferito: Immagine+(numero da 1 a 5)");
                 String immagineScelta = sc.nextLine();
-                AudOpt riprodurreImg = AudOpt.valueOf(immagineScelta);
+                ImgOpt riprodurreImg = ImgOpt.valueOf(immagineScelta);
                 //Adesso agisci poi cancella commento
-                System.out.println("Hai scelto l'immagine: " + riprodurreImg);
+                immagine.alzaLaLuce(riprodurreImg);
+                immagine.abbassaLaLuce(riprodurreImg);
+                immagine.show(riprodurreImg);
                 break;
             }
         }
     }
 
-    private static void alzaVolume() {
-    }
+   
 }

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Audio extends Multimedia {
     Scanner sc = new Scanner(System.in);
-    private int volume;
 
     //costruttore
     public Audio() {
@@ -52,4 +51,16 @@ public class Audio extends Multimedia {
             System.out.println();
         }
     }
+
+    @Override
+    public void play(VidOpt video) {
+
+    }
+
+    @Override
+    public void show(ImgOpt img) {
+
+    }
+
+    
 }
