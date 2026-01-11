@@ -29,7 +29,7 @@ public class Main {
             }
             case Video: {
 
-                System.out.println("Scegli il tuo audio preferito: Video+(numero da 1 a 5)");
+                System.out.println("Scegli il tuo audio preferito, scrivimi: Video+(numero da 1 a 5)");
                 String videoScelto = sc.nextLine();
                 VidOpt riprodurreVid = VidOpt.valueOf(videoScelto);
 
@@ -54,5 +54,5 @@ public class Main {
         }
     }
 
-   
+
 }
